@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.container {
+  			max-width: 1000px;
+  			position: relative;
+  			margin: auto;
+		}
+		.slide1 {
+  			display: none;
+		}
+		.prev, .next {
+  			cursor: pointer;
+  			position: absolute;
+  			top: 50%;
+  			width: auto;
+  			margin-top: -22px;
+  			padding: 16px;
+  			color: white;
+  			font-weight: bold;
+  			font-size: 18px;
+  			border-radius: 0 3px 3px 0;
+  			user-select: none;
+		}
+		.next {
+  			right: 0;
+  			border-radius: 3px 0 0 3px;
+		}
+		.prev:hover, .next:hover {
+  			background-color: rgba(0,0,0,0.8);
+		}
+		.text {
+  			color: #f2f2f2;
+  			font-size: 50px;
+  			padding: 8px 12px;
+  			position: absolute;
+  			bottom: 8px;
+  			width: 98%;
+  			text-align: center;
+  			font-weight: bold;
+  			background-color: hsla(0, 100%, 30%, 0.3);
+		}
+		.numbertext {
+  			color: #f2f2f2;
+  			font-size: 15px;
+  			padding: 8px 12px;
+  			position: absolute;
+  			top: 0;
+		}
+		.dot {
+  			cursor: pointer;
+  			height: 15px;
+  			width: 15px;
+  			margin: 0 2px;
+  			background-color: #bbb;
+  			border-radius: 50%;
+  			display: inline-block;
+		}
+		.active, .dot:hover {
+  			background-color: #717171;
+		}
+	</style>
+	<script type="text/javascript">
+		var slideIndex = 1;
+	 	showSlides(slideIndex);
+		function plusSlides(n) {
+  			showSlides(slideIndex += n);
+		}
+		function currentSlide(n) {
+  			showSlides(slideIndex = n);
+		}
+		function showSlides(n) {
+  			var i;
+  			var slides = document.getElementsByClassName("slide1");
+  			var dots = document.getElementsByClassName("dot");
+  			if (n > slides.length) {slideIndex = 1}
+  			if (n < 1) {slideIndex = slides.length}
+  			for (i = 0; i < slides.length; i++) {
+      			slides[i].style.display = "none";
+  			}
+  			for (i = 0; i < dots.length; i++) {
+      			dots[i].className = dots[i].className.replace(" active", "");
+  			}
+  			slides[slideIndex-1].style.display = "block";
+  			dots[slideIndex-1].className += " active";
+			}
+	</script>	
+</head>
+<body>
+	<div class="container">
+		<div class="slide1" style="display: block;">
+			<div class="numbertext">1/6</div>
+			<img src="C:\Users\eshan\Desktop\IMG1.jpg" height="500" width="1000">
+			<div class="text">HOME FURNITURE</div>
+		</div>
+		<div class="slide1">
+			<div class="numbertext">2/6</div>
+			<img src="C:\Users\LENOVO\Desktop\HTML\dreamtrip\images\Destinations\south_india\south1.jpg" height="500" width="1000">
+			<div class="text">CLOTHING</div>
+		</div>
+		<div class="slide1">
+			<div class="numbertext">3/6</div>
+			<img src="C:\Users\LENOVO\Desktop\HTML\dreamtrip\images\Destinations\east_india\east1.jpg" height="500" width="1000">
+			<div class="text">ELECTRONICS</div>
+		</div>
+		<div class="slide1">
+			<div class="numbertext">4/6</div>
+			<img src="C:\Users\LENOVO\Desktop\HTML\dreamtrip\images\Destinations\central_india\central1.jpg" height="500" width="1000">
+			<div class="text">FASHION</div>
+		</div>
+		<div class="slide1">
+			<div class="numbertext">5/6</div>
+			<img src="C:\Users\LENOVO\Desktop\HTML\dreamtrip\images\Destinations\west_india\west1.jpg" height="500" width="1000">
+			<div class="text">BOOKS & GAMES</div>
+		</div>
+		<div class="slide1">
+			<div class="numbertext">6/6</div>
+			<img src="C:\Users\LENOVO\Desktop\HTML\dreamtrip\images\Destinations\longdrive\ld1.jpg" height="500" width="1000">
+			<div class="text">SPORTS</div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div><br>
+	<div style="text-align: center;">
+		<span class="dot active" onclick="currentSlide(1)"></span>
+  		<span class="dot" onclick="currentSlide(2)"></span>
+  		<span class="dot" onclick="currentSlide(3)"></span>
+  		<span class="dot" onclick="currentSlide(4)"></span>
+  		<span class="dot" onclick="currentSlide(5)"></span>
+  		<span class="dot" onclick="currentSlide(6)"></span>		
+	</div>
+
+</body>
+</html>

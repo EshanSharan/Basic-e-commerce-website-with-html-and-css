@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script>
+            function display(){
+                var a=["a","b","c","d"];
+                for(var i=0;i<4;i++)
+                {
+                    document.write(a[i]);
+                    document.write("<br>");
+                }
+            }
+            function reverse(){
+                var a=["a","b","c","d"];
+                for(var i=3;i>=0;i--)
+                {
+                    document.write(a[i]);
+                    document.write("<br>");
+                }
+            }
+            function pop(){
+                var a=["a","b","c","d"];
+                a.pop();
+                var b= a.length;
+                for(var i=0;i<b;i++)
+                {
+                    document.write(a[i]);
+                    document.write("<br>");
+                }
+
+            }
+            function num(){
+                a=["a","b","c","d"];
+                var b = a.length;
+                document.write(b);
+            }
+            function sort(){
+                var c=["c","b","r","u","a"];
+                c.sort();
+                var b=c.length;
+                for(var i=0;i<b;i++)
+                {
+                    document.write(c[i]);
+                    document.write("<br>");
+                }
+            }
+            function add(){
+               var b =["a","c","c","d"];
+                var a= prompt("Enter Name:");
+                b.push(a);
+                var c= b.length;
+                for(var i=0;i<c;i++)
+                {
+                    document.write(b[i]);
+                    document.write("<br>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="display()">Display</button>
+        <button onclick="reverse()">Reverse</button>
+        <button id="a" onclick="pop()">Delete</button>
+        <button onclick="num()">Number</button>
+        <button onclick="sort()">Sort</button>
+        <button onclick="add()">add</button>
+    </body>
+</html>

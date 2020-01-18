@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lootkart Login Page</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function abcd()
+		{
+			var n = document.getElementById("a").value;
+		var m = document.getElementById("abc").value;
+		if(m=="" || n=="")
+		{
+			 alert("filling both is mandatory");
+		}
+		else
+		{
+			 location.href="file:///C:/study%20material/wt/site.html";
+		}
+	}
+	    function signup()
+	{
+		location.href="file:///C:/study%20material/wt/signup.html?email=asd&psw=wadas&psw-repeat=dasdas&remember=on#"
+	}
+	</script>
+</head>
+<body>
+
+	<form action="" class="box" action="index.html" method="post">
+		<input type="text" id="abc" placeholder="Username">
+		<input type="password" id="a" placeholder="Password"><br>
+		<input type="button" id="ab" onclick="abcd()" value="Login"><br><br>
+		<input type="button" id="abdd" onclick="signup()" value="SignUp">
+	</form>
+
+</body>
+</html>

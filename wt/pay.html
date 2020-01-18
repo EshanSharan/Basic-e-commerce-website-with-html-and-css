@@ -1,0 +1,22 @@
+99<html>
+    <head>
+<script>
+    function sal(){
+        var a = document.getElementById("date").value;
+        var regx =/[0-31]{1,2}\-[0-12]{1,2}\-\d{4}$/;
+        if(regx.test(a))
+        {
+            alert("hn");
+        }
+        else
+        {
+            alert("na");
+        }
+    }
+</script>
+    </head>
+    <body>
+         <input type="text" id="date">
+         <button onclick="sal()">Click</button>
+    </body>
+</html>

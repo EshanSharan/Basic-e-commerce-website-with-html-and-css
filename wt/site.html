@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<head>
+	<title>Lootkart</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .container {
+  			max-width: 1000px;
+  			position: relative;
+  			margin: auto;
+		}
+		.slide1 {
+  			display: none;
+		}
+		.prev, .next {
+  			cursor: pointer;
+  			position: absolute;
+  			top: 50%;
+  			width: auto;
+  			margin-top: -22px;
+  			padding: 16px;
+  			color: white;
+  			font-weight: bold;
+  			font-size: 18px;
+  			border-radius: 0 3px 3px 0;
+  			user-select: none;
+		}
+		.next {
+  			right: 0;
+  			border-radius: 3px 0 0 3px;
+		}
+		.prev:hover, .next:hover {
+  			background-color: rgba(0,0,0,0.8);
+		}
+		.text {
+  			color: #f2f2f2;
+  			font-size: 50px;
+  			padding: 8px 12px;
+  			position: absolute;
+  			bottom: 8px;
+  			width: 98%;
+  			text-align: center;
+  			font-weight: bold;
+  			background-color: hsla(0, 100%, 30%, 0.3);
+		}
+		.numbertext {
+  			color: #f2f2f2;
+  			font-size: 15px;
+  			padding: 8px 12px;
+  			position: absolute;
+  			top: 0;
+		}
+		.dot {
+  			cursor: pointer;
+  			height: 15px;
+  			width: 15px;
+  			margin: 0 2px;
+  			background-color: #bbb;
+  			border-radius: 50%;
+  			display: inline-block;
+		}
+		.active, .dot:hover {
+  			background-color: #717171;
+		}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #000000;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #90EE90;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  padding: 0px;
+  transition: transform .2s;
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}
+
+</style>
+<script type="text/javascript">
+  var slideIndex = 1;
+   showSlides(slideIndex);
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
+  }
+  function currentSlide(n) {
+      showSlides(slideIndex = n);
+  }
+  function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("slide1");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+</script>	
+</head>
+<body bgcolor="white">
+<table border="0" width="100%" bgcolor="#FFFFFF">
+<tr>
+<td align="center">
+	<a href="file:///C:/study%20material/wt/site.html#contact">
+		<img src="C:\study material\wt\p.jpg" width="65" height="50">
+	</a>
+</td>
+<td><input type="text" placeholder="Search for products............................" ></td>
+<th><a href="file:///C:/study%20material/wt/login.html" target="_blank">Login & Signup</a> </th>
+<th><a href="file:///C:/study%20material/wt/aboutus.html" target="_blank">More</a></th>
+<td align="center"><a href="file:///C:/study%20material/wt/cart.html#"><img src="C:\study material\wt\c.png" width="65" height="50"></td> 
+</table>
+<table border="0" width="100%" bgcolor="#90EE90">
+<th width="14.28"><div class="dropdown">
+  <button class="dropbtn">Electronics</button>
+  <div class="dropdown-content">
+    <a href="#">Mobiles</a>
+    <a href="#">Laptops</a>
+    <a href="#">Speakers</a>
+  </div>
+</div></th>
+<th width="14.28"><div class="dropdown">
+  <button class="dropbtn">Tv's and appliances</button>
+  <div class="dropdown-content">
+    <a href="#">Television</a>
+    <a href="#">Accessories</a>
+    <a href="#">Air Conditioner</a>
+  </div>
+</div></th>
+<th width="14.28"><div class="dropdown">
+  <button class="dropbtn">Men</button>
+  <div class="dropdown-content">
+    <a href="#">Footwear</a>
+    <a href="#">Clothing</a>
+    <a href="#">Seasonal Wear</a>
+  </div>
+</div></th>
+<th width="14.28"><div class="dropdown">
+  <button class="dropbtn">Women</button>
+  <div class="dropdown-content">
+    <a href="#">Ethnic Wear</a>
+    <a href="#">Saree</a>
+    <a href="#">Footwear</a>
+  </div>
+</div></th>
+<th width="14.28"><div class="dropdown">
+  <button class="dropbtn">Baby & Kinds</button>
+  <div class="dropdown-content">
+    <a href="#">Kids Clothing</a>
+    <a href="#">Toys</a>
+    <a href="#">Footwear</a>
+  </div>
+</div></th>
+<th width="14.28"><div class="dropdown">
+  <button class="dropbtn">Home & Decor</button>
+  <div class="dropdown-content">
+    <a href="#">Kitchen</a>
+    <a href="#">Furniture</a>
+    <a href="#">Decorations</a>
+  </div>
+</div></th>
+<th width="14.28"><div class="dropdown">
+  <button class="dropbtn">Sports & Others</button>
+  <div class="dropdown-content">
+    <a href="#">Sports</a>
+    <a href="#">Books</a>
+    <a href="#">Music</a>
+  </div>
+</div></th>
+</table><br>
+<center><img src="C:\study material\wt\k.gif" width="70%" height="40%"></center><br>
+
+<table border="0" width="100%" bgcolor="#90EE90">
+<tr>
+<td><b><a href="https://www.flipkart.com/search?q=mobiles&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" target="_blank">Mobiles</a></b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\m1.jpg" width="200" height="250"/></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\m2.jpg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\m3.jpg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\m5.jpg" width="230" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\m4.jpeg" width="200" height="250"></td></div>
+</tr>
+<td><b><a href="https://www.flipkart.com/search?q=earphone&sid=0pm%2Cfcn&as=on&as-show=on&otracker=AS_QueryStore_OrganicAutoSuggest_0_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_0_3_na_na_na&as-pos=0&as-type=RECENT&suggestionId=earphone&requestId=8382cf89-1750-4d1b-b773-28bc5cd9f3c2&as-backfill=on" target="_blank">Earphones</a></b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\e1.jpeg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\e2.jpg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\e3.jpg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\e5.jpg" width="230" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\e4.jpg" width="200" height="250"></td></div>
+</tr>
+<td><b><a href="https://www.flipkart.com/search?q=shoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off" target="_blank">Shoes</a></b></td>
+</tr>
+<tr bgcolor="white">
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\s1.jpeg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\s2.jpeg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\s3.jpg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\s5.jpg" width="200" height="250"></td></div>
+<td width="20%"><div class="zoom"><img src="C:\study material\wt\s4.jpg" width="200" height="250"></td></div>
+</tr>
+<tr>
+  <td></td>
+</tr>
+<tr>
+    <div class="container">
+        <div class="slide1" style="display: block;">
+          <div class="numbertext">1/6</div>
+          <img src="C:\study material\wt\IMG1.jpg" height="500" width="1000">
+          <div class="text">HOME FURNITURE</div>
+        </div>
+        <div class="slide1">
+          <div class="numbertext">2/6</div>
+          <img src="C:\study material\wt\i.jpg" height="500" width="1000">
+          <div class="text">CLOTHING</div>
+        </div>
+        <div class="slide1">
+          <div class="numbertext">3/6</div>
+          <img src="C:\study material\wt\e.png" height="500" width="1000">
+          <div class="text">ELECTRONICS</div>
+        </div>
+        <div class="slide1">
+          <div class="numbertext">4/6</div>
+          <img src="C:\study material\wt\f.jpg" height="500" width="1000">
+          <div class="text">FASHION</div>
+        </div>
+        <div class="slide1">
+          <div class="numbertext">5/6</div>
+          <img src="C:\study material\wt\b.jpg" height="500" width="1000">
+          <div class="text">BOOKS & GAMES</div>
+        </div>
+        <div class="slide1">
+          <div class="numbertext">6/6</div>
+          <img src="C:\study material\wt\s.jpg" height="500" width="1000">
+          <div class="text">SPORTS</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div><br>
+      <div style="text-align: center;">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>		
+      </div>
+</tr>
+</table>
+<br>
+<center><img src="C:\study material\wt\summersale.jpg" width="100%" height="40%"></center><br>
+</body>
+</html>
